@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+.center-navbar {
+  width: 50%;
+  margin: auto;
+}
+
+.news-image {
+  max-height: 400px;
+  max-width: 500px;
+}
+
+.news-border {
+  border-top: 5;
+  border-bottom: 0;
+  border-style: solid;
+  border-right: 0;
+  border-left: 0;
+}
