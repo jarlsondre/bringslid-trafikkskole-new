@@ -11,7 +11,7 @@ class NewsStory extends Component {
 
   render() {
     return (
-      <div className="mt-5 news-border">
+      <div className="mt-5 ">
         <h3>{this.props.title}</h3>
         {this.getImage()}
         <p className="mt-2">{this.props.text} </p>

@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .center-navbar {
@@ -8,8 +9,7 @@ body {
 }
 
 .news-image {
-  max-height: 400px;
-  max-width: 500px;
+  width: 100%;
 }
 
 .news-border {

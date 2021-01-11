@@ -6,6 +6,12 @@ class Prices extends Component {
   render() {
     return (
       <div>
+        <h1 className="mt-3">Priser</h1>
+        <p>
+          Ved kjøring i Molde legger vi til et kvarter på en dobbelttime. Dette
+          vil si at en dobbelttime varer i 105 minutter, i stedet for 90
+          minutter som er vanlig. Denne økningen skjer kostnadsfritt.
+        </p>
         <PriceList />
       </div>
     );

@@ -7,7 +7,7 @@ class Contact extends Component {
       <div>
         <h1>Kontaktinformasjon</h1>
         <p>E-post: yvonne@bringslidtrafikkskole.no</p>
-        <p>Telefon: 915914004</p>
+        <p>Telefon: 91514004</p>
       </div>
     );
   }

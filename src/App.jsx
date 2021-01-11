@@ -13,13 +13,19 @@ class App extends Component {
         <NavBar />
 
         <div className="row">
-          <div className="col-md-4 offset-md-3 bg-light">
+          <div
+            className="col-md-4 offset-md-3"
+            style={{ backgroundColor: "WhiteSmoke" }}
+          >
             <Switch>
               <Route path="/" exact component={News} />
               <Route path="/priser" exact component={Prices} />
             </Switch>
           </div>
-          <div className="col-md-2 bg-light">
+          <div
+            className="col-md-2 ml-2"
+            style={{ backgroundColor: "WhiteSmoke" }}
+          >
             <Sidebar />
           </div>
         </div>
