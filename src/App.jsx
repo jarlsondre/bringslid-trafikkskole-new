@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
 import Prices from "./components/Prices/Prices";
 import NavBar from "./components/Navigation/NavBar";
+import Sidebar from "./components/Sidebar/Sidebar";
+import News from "./components/Home/News";
 
 class App extends Component {
   state = {};
@@ -10,10 +11,18 @@ class App extends Component {
     return (
       <BrowserRouter>
         <NavBar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/priser" exact component={Prices} />
-        </Switch>
+
+        <div className="row">
+          <div className="col-md-4 offset-md-3 bg-light">
+            <Switch>
+              <Route path="/" exact component={News} />
+              <Route path="/priser" exact component={Prices} />
+            </Switch>
+          </div>
+          <div className="col-md-2 bg-light">
+            <Sidebar />
+          </div>
+        </div>
       </BrowserRouter>
     );
   }
