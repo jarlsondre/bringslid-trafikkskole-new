@@ -1,40 +1,74 @@
 import React, { Component } from "react";
 
+import Counter from "./Counter";
+
 class PriceList extends Component {
   state = {
     pricelist: [
       {
         name: "Kjøretime (45 min)",
-        price: "625,- pr. stk.",
-        id: "1",
+        price: 625,
+        id: 1,
+        amount: 2,
       },
       {
         name: "Sikkerhetskurs på øvingsbane inkl. baneleie NAF (glattkjøring)",
-        price: "4.400,-",
-        id: "2",
+        price: 4400,
+        id: 2,
+        amount: 0,
       },
       {
         name: "Forbikjøring inkl. teori",
-        price: "1.500,-",
-        id: "3",
+        price: 1500,
+        id: 3,
+        amount: 0,
       },
       {
         name: "Sikkerhetskurs på landevei",
-        price: "6.450,-",
-        id: "4",
+        price: 6450,
+        id: 4,
+        amount: 0,
       },
       {
         name: "Mørkekjøring",
-        price: "1.500,-",
-        id: "5",
+        price: 1500,
+        id: 5,
+        amount: 0,
       },
       {
         name: "Leie av bil til førerprøve",
-        price: "1.500,-",
-        id: "6",
+        price: 1500,
+        id: 6,
+        amount: 0,
       },
     ],
   };
+
+  handleIncrement = (price) => {
+    const pricelist = [...this.state.pricelist];
+    const index = this.state.pricelist.indexOf(price);
+    pricelist[index] = { ...price };
+    if (price.id === 1 || pricelist[index].amount < 1) {
+      pricelist[index].amount++;
+      this.setState({ pricelist });
+    }
+  };
+
+  handleDecrement = (price) => {
+    const pricelist = [...this.state.pricelist];
+    const index = this.state.pricelist.indexOf(price);
+    pricelist[index] = { ...price };
+    if (pricelist[index].amount > 0) {
+      pricelist[index].amount--;
+      this.setState({ pricelist });
+    }
+  };
+
+  getTotalAmount() {
+    let totalAmount = 0;
+    this.state.pricelist.forEach((a) => (totalAmount += a.price * a.amount));
+    return totalAmount;
+  }
 
   render() {
     return (
@@ -44,6 +78,7 @@ class PriceList extends Component {
             <tr>
               <th>Tjeneste</th>
               <th className="text-xs-right">Pris</th>
+              <th>Antall</th>
             </tr>
           </thead>
           <tbody>
@@ -51,12 +86,22 @@ class PriceList extends Component {
               return (
                 <tr key={service.id}>
                   <td>{service.name}</td>
-                  <td>kr {service.price}</td>
+                  <td>kr {service.price},-</td>
+                  <td>
+                    <Counter
+                      key={service.id}
+                      value={service.amount}
+                      service={service}
+                      onIncrement={this.handleIncrement}
+                      onDecrement={this.handleDecrement}
+                    />
+                  </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+        <p className=" bigger-font">Totalt: {this.getTotalAmount()},-</p>
       </div>
     );
   }
