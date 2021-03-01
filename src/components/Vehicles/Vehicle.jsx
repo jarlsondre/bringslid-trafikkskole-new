@@ -5,8 +5,15 @@ import Modal from "react-modal";
 Modal.setAppElement("#root");
 
 class Vehicle extends Component {
+  constructor(props) {
+    super(props);
+    this.imgRef = React.createRef();
+  }
+
   state = {
     modalIsOpen: false,
+    height: 300,
+    width: 300,
   };
 
   openModal() {
@@ -32,9 +39,22 @@ class Vehicle extends Component {
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={() => this.closeModal()}
+          className="center"
+          style={{
+            overlay: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            },
+            content: {},
+          }}
         >
-          {" "}
-          <img style={{ maxWidth: "800px" }} src={this.props.image} alt="" />
+          <img
+            ref={this.imgRef}
+            style={{ maxWidth: "800px", width: "100%" }}
+            src={this.props.image}
+            alt=""
+          />
         </Modal>
       </div>
     );

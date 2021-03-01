@@ -25,5 +25,10 @@ body {
 }
 
 .vehicle-image {
-  width: 300px;
+  width: 60%;
+}
+
+.modal-size {
+  width: 800px;
+  height: 800px;
 }
