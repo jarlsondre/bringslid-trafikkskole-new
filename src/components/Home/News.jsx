@@ -1,31 +1,15 @@
 import React, { Component } from "react";
 import NewsStory from "./NewsStory";
 
-import FireworksImage from "../../images/fireworks.jpg";
-import CoronaImage from "../../images/coronavirus.png";
-import TeslaImage from "../../images/tesla.png";
+import TeslaImage from "../../images/yvonne_og_tesla.jpg";
 
 class News extends Component {
   state = {
     stories: [
       {
-        title: "Nye nettsider!",
+        title: "Velkommen til Bringslid Trafikkskole",
         text:
-          "Bringslid Trafikkskole har nå fått oppdatert sine nettsider. Dette er vi svært glade for, men siden er fortsatt under utvikling. Dersom noen skulle ha noen tips eller finner mangler på nettsiden så er det bare å si fra, enten på e-post eller via melding.",
-        id: 1,
-        storyImage: FireworksImage,
-      },
-      {
-        title: "Vi har fått en ny bil!",
-        text:
-          "Bringslid Trafikkskole har nå fått oppdatert sine nettsider. Dette er vi svært glade for, men siden er fortsatt under utvikling. Dersom noen skulle ha noen tips eller finner mangler på nettsiden så er det bare å si fra, enten på e-post eller via melding.",
-        id: 2,
-        storyImage: CoronaImage,
-      },
-      {
-        title: "Hei, velkommen til oss som kunde!",
-        text:
-          "Bringslid Trafikkskole har nå fått oppdatert sine nettsider. Dette er vi svært glade for, men siden er fortsatt under utvikling. Dersom noen skulle ha noen tips eller finner mangler på nettsiden så er det bare å si fra, enten på e-post eller via melding.",
+          "Hei, og velkommen til Bringslid Trafikkskole. Vi er en trafkkskole som holder til i HTL-bygget i Elnesvågen. Kjøreskolen drives av Yvonne Bringslid som har vært kjørelærer i over 20 år. Vi tilbyr konkurransedyktige priser og opplæring av høyeste kvalitet. For å bestille time, kontakt Yvonne på 91 51 40 04 eller på yvonne@bringslidtrafikkskole.no",
         id: 3,
         storyImage: TeslaImage,
       },

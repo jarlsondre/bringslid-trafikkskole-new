@@ -10,6 +10,7 @@ body {
 
 .news-image {
   width: 100%;
+  padding-bottom: 10px;
 }
 
 .news-border {
@@ -20,15 +21,79 @@ body {
   border-left: 0;
 }
 
+.news-story,
+.contact,
+.map,
+.offices {
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.inner {
+  padding: 15px;
+}
 .bigger-font {
   font-size: 20px;
 }
 
+.counter-number {
+  text-align: center;
+}
+
 .vehicle-image {
-  width: 60%;
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 .modal-size {
   width: 800px;
   height: 800px;
+}
+
+.vehicle {
+  padding: 10px;
+}
+
+.counter-button {
+  width: 100%;
+}
+
+.price-list-service {
+  vertical-align: middle;
+}
+
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  width: 50%;
+}
+
+@media only screen and (min-width: 800px) {
+  .main-content {
+    width: 40%;
+    min-width: 600px;
+    margin-right: 20px;
+  }
+  .content-row {
+    padding-left: 25%;
+  }
+  .side-content {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-content {
+    width: 80%;
+  }
+  .content-row {
+    justify-content: center;
+  }
+  .side-content {
+    width: 80%;
+  }
 }

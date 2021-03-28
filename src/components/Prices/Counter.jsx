@@ -11,25 +11,30 @@ class Counter extends Component {
       <div>
         <button
           onClick={() => {
-            this.props.onDecrement(this.props.service);
-          }}
-          disabled={this.getDisabled(this.props.value, 0)}
-          className="btn btn-danger btn-sm"
-        >
-          -
-        </button>
-        <span className="bigger-font ml-1 mr-1">{this.props.value}</span>
-        <button
-          onClick={() => {
             this.props.onIncrement(this.props.service);
           }}
           disabled={this.getDisabled(
             this.props.value,
             this.props.service.maxValue
           )}
-          className="btn btn-primary btn-sm"
+          className="btn btn-primary counter-button"
         >
           +
+        </button>
+        <span
+          className="bigger-font counter-number"
+          style={{ display: "block" }}
+        >
+          {this.props.value}
+        </span>
+        <button
+          onClick={() => {
+            this.props.onDecrement(this.props.service);
+          }}
+          disabled={this.getDisabled(this.props.value, 0)}
+          className="btn btn-danger counter-button"
+        >
+          -
         </button>
       </div>
     );

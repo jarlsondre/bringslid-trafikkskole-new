@@ -12,22 +12,15 @@ class App extends Component {
     return (
       <BrowserRouter>
         <NavBar />
-
-        <div className="row">
-          <div
-            className="col-lg-4 offset-lg-3"
-            style={{ backgroundColor: "WhiteSmoke" }}
-          >
+        <div className="content-row">
+          <div className="main-content">
             <Switch>
               <Route path="/" exact component={News} />
               <Route path="/priser" exact component={Prices} />
               <Route path="/kjoretoy" exact component={Vehicles} />
             </Switch>
           </div>
-          <div
-            className="col-lg-2 ml-2"
-            style={{ backgroundColor: "WhiteSmoke" }}
-          >
+          <div className="side-content">
             <Sidebar />
           </div>
         </div>

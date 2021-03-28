@@ -86,8 +86,8 @@ class PriceList extends Component {
             {this.state.pricelist.map((service) => {
               return (
                 <tr key={service.id}>
-                  <td>{service.name}</td>
-                  <td>kr {service.price},-</td>
+                  <td className="align-middle">{service.name}</td>
+                  <td className="align-middle">kr {service.price},-</td>
                   <td>
                     <Counter
                       key={service.id}
@@ -102,7 +102,7 @@ class PriceList extends Component {
             })}
             <tr className="bigger-font">
               <td>Totalt</td>
-              <td>kr {this.getTotalAmount()},-</td>
+              <td>{this.getTotalAmount()},-</td>
             </tr>
           </tbody>
         </table>

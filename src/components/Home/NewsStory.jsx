@@ -11,10 +11,12 @@ class NewsStory extends Component {
 
   render() {
     return (
-      <div className="mt-4 ">
-        <h3>{this.props.title}</h3>
-        {this.getImage()}
-        <p className="mt-2">{this.props.text} </p>
+      <div className="mt-4 news-story">
+        <div className="inner">
+          <h3>{this.props.title}</h3>
+          {this.getImage()}
+          <p className="mt-2">{this.props.text} </p>
+        </div>
       </div>
     );
   }

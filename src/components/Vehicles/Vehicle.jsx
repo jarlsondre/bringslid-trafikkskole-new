@@ -28,7 +28,7 @@ class Vehicle extends Component {
 
   render() {
     return (
-      <div>
+      <div className="vehicle">
         <h3>{this.props.name}</h3>
         <img
           onClick={() => this.openModal()}
@@ -46,16 +46,26 @@ class Vehicle extends Component {
               alignItems: "center",
               justifyContent: "center",
             },
-            content: {},
+            content: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              maxWidth: "70%",
+            },
           }}
         >
           <img
             ref={this.imgRef}
-            style={{ maxWidth: "800px", width: "100%" }}
+            style={{ width: "100%" }}
             src={this.props.image}
             alt=""
           />
         </Modal>
+        <p>
+          Girtype: {this.props.girtype} <br />
+          Årsmodell: {this.props.arsmodell}
+        </p>
+        <p>{this.props.beskrivelse}</p>
       </div>
     );
   }

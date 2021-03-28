@@ -4,10 +4,12 @@ class Contact extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <h1>Kontaktinformasjon</h1>
-        <p>E-post: yvonne@bringslidtrafikkskole.no</p>
-        <p>Telefon: 91514004</p>
+      <div className="contact">
+        <div className="inner">
+          <h1 style={{ wordWrap: "break-word" }}>Kontaktinfo</h1>
+          <p>E-post: yvonne@bringslidtrafikkskole.no</p>
+          <p>Telefon: 91514004</p>
+        </div>
       </div>
     );
   }
