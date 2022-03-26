@@ -7,13 +7,13 @@ class PriceList extends Component {
     pricelist: [
       {
         name: "Kjøretime (45 min)",
-        price: 660,
+        price: 685,
         id: 1,
         amount: 0,
       },
       {
         name: "Sikkerhetskurs på øvingsbane inkl. baneleie NAF (glattkjøring)",
-        price: 4550,
+        price: 4700,
         id: 2,
         amount: 1,
         maxValue: 1,
@@ -27,7 +27,7 @@ class PriceList extends Component {
       },
       {
         name: "Risikoteori",
-        price: 300,
+        price: 400,
         id: 4,
         amount: 1,
         maxValue: 1,
@@ -55,7 +55,7 @@ class PriceList extends Component {
       },
       {
         name: "Oppvarmingstime før oppkjøring (60 min)",
-        price: 700,
+        price: 715,
         id: 8,
         amount: 0,
         maxValue: 1,
