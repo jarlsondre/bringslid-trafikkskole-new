@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./navbar.css";
 
 class NavBar extends Component {
   state = {
@@ -12,20 +13,20 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarToggler"
-          aria-controls="navbarToggler"
-          aria-expanded={this.state.isNavCollapsed}
-          aria-label="Toggle navigation"
-          onClick={this.handleNavCollapse}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="center-navbar">
+      <div className="navbar-container">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggler"
+            aria-controls="navbarToggler"
+            aria-expanded={this.state.isNavCollapsed}
+            aria-label="Toggle navigation"
+            onClick={this.handleNavCollapse}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
           <div
             className={
               (this.state.isNavCollapsed ? "collapse " : " ") +
@@ -54,8 +55,8 @@ class NavBar extends Component {
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     );
   }
 }
