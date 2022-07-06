@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Prices from "./components/Prices/Prices";
 import NavBar from "./components/Navigation/NavBar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import News from "./components/Home/News";
@@ -16,7 +15,6 @@ class App extends Component {
           <div className="main-content">
             <Switch>
               <Route path="/" exact component={News} />
-              <Route path="/priser" exact component={Prices} />
               <Route path="/kjoretoy" exact component={Vehicles} />
             </Switch>
           </div>
