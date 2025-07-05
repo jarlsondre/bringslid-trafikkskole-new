@@ -64,30 +64,19 @@
 }
 
 .main-content {
-  width: 50%;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 @media only screen and (min-width: 800px) {
-  .main-content {
-    width: 40%;
-    min-width: 600px;
-    margin-right: 20px;
-  }
-  .content-row {
-    padding-left: 25%;
-  }
   .side-content {
     width: 400px;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .main-content {
-    width: 80%;
-  }
-  .content-row {
-    justify-content: center;
-  }
   .side-content {
     width: 80%;
   }

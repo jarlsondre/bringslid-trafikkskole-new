@@ -37,16 +37,6 @@ class NavBar extends Component {
               Bringslid Trafikkskole
             </a>
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Hjem
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/kjoretoy" className="nav-link">
-                  Kjøretøy
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

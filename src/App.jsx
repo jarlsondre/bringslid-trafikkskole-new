@@ -18,9 +18,6 @@ class App extends Component {
               <Route path="/kjoretoy" exact component={Vehicles} />
             </Switch>
           </div>
-          <div className="side-content">
-            <Sidebar />
-          </div>
         </div>
       </BrowserRouter>
     );
