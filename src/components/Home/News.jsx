@@ -9,11 +9,8 @@ class News extends Component {
     stories: [
       {
         title: "Velkommen til Bringslid Trafikkskole",
-        text: `Hei, og velkommen til Bringslid Trafikkskole. Vi er en trafkkskole som holder
-        til i HTL-bygget i Elnesvågen. Kjøreskolen drives av Yvonne Bringslid som har vært
-        kjørelærer i over 30 år. Vi tilbyr konkurransedyktige priser og opplæring av høyeste
-        kvalitet. For å bestille time, kontakt Yvonne på 91 51 40 04 eller på 
-        yvonne@bringslidtrafikkskole.no`,
+        text: `Hei, og velkommen til Bringslid Trafikkskole. Vi holder til i Elnesvågen. Ta
+        kontakt for opplæring på 91 51 40 04.`,
         storyImage: TeslaImage,
       },
     ],
