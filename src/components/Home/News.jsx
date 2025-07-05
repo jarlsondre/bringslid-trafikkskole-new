@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NewsStory from "./NewsStory";
 
 import TeslaImage from "../../images/yvonne_og_tesla.jpg";
-import LogoImage from "../../images/wright_bringslid_logo.png";
 
 class News extends Component {
   state = {
